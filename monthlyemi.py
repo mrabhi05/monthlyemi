@@ -20,23 +20,17 @@ class Calculations:
 
 if __name__ == '__main__':
 
-    x = input("Enter the amount to be saved: ")
-    tax = input("Enter the tax amount: ")
-    brokerage = input("Enter the brokerage: ")
-    period = input("Enter the period: ")
+    x = float(input("Enter the amount to be saved: "))
+    tax = float(input("Enter the tax amount: "))
+    brokerage = float(input("Enter the brokerage: "))
+    period = float(input("Enter the period: "))
     
-    amtPossible = input("Enter the amount that you can save: ")
-    ExpectedROR = input("Enter the expected rate of return: ")
+    amtPossible = float(input("Enter the amount that you can save: "))
+    ExpectedROR = float(input("Enter the expected rate of return: "))
     ExpectedROR = ExpectedROR/100
 
-
-
-
-
-    print("Enter Option\n1. \n")
-    s1 = Calculations()
-    print(s1.optionCalc(option))
-
+    calc = Calculations()
+    print(calc.amtToBeSaved(x, tax, brokerage, period, amtPossible,ExpectedROR))
 
 
 
