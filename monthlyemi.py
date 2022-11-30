@@ -1,5 +1,5 @@
 
-class method_switch:
+class Calculations:
     def optionCalc(self, option):
  
         default = "Incorrect Option"
@@ -12,6 +12,9 @@ class method_switch:
     def case_2(self):
         return "Option 2"
 
+    def amtToBeSaved(self, x, tax, brokerage, period, amtPossible,ExpectedROR):
+        return ((x + tax +brokerage)*pow((1+ExpectedROR),period))/pow((1+ExpectedROR),period*(period-1))
+        pass
 
 
 
@@ -24,14 +27,15 @@ if __name__ == '__main__':
     
     amtPossible = input("Enter the amount that you can save: ")
     ExpectedROR = input("Enter the expected rate of return: ")
+    ExpectedROR = ExpectedROR/100
 
 
 
 
 
     print("Enter Option\n1. \n")
-    s1 = method_switch()
-    print(s1.day(option))
+    s1 = Calculations()
+    print(s1.optionCalc(option))
 
 
 
